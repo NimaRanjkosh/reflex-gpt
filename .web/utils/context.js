@@ -2,7 +2,7 @@ import { createContext, useContext, useMemo, useReducer, useState, createElement
 import { applyDelta, Event, hydrateClientStorage, useEventLoop, refs } from "$/utils/state"
 import { jsx } from "@emotion/react";
 
-export const initialState = {"reflex___state____state": {"is_hydrated_rx_state_": false, "router_rx_state_": {"session": {"client_token": "", "client_ip": "", "session_id": ""}, "headers": {"host": "", "origin": "", "upgrade": "", "connection": "", "cookie": "", "pragma": "", "cache_control": "", "user_agent": "", "sec_websocket_version": "", "sec_websocket_key": "", "sec_websocket_extensions": "", "accept_encoding": "", "accept_language": "", "raw_headers": {}}, "page": {"host": "", "path": "", "raw_path": "", "full_path": "", "full_raw_path": "", "params": {}}, "url": "", "route_id": ""}}, "reflex___state____state.reflex___state____frontend_event_exception_state": {}, "reflex___state____state.reflex___state____on_load_internal_state": {}, "reflex___state____state.reflex___state____update_vars_internal_state": {}, "reflex___state____state.reflex_gpt___reflex_gpt____state": {}}
+export const initialState = {"reflex___state____state": {"is_hydrated_rx_state_": false, "router_rx_state_": {"session": {"client_token": "", "client_ip": "", "session_id": ""}, "headers": {"host": "", "origin": "", "upgrade": "", "connection": "", "cookie": "", "pragma": "", "cache_control": "", "user_agent": "", "sec_websocket_version": "", "sec_websocket_key": "", "sec_websocket_extensions": "", "accept_encoding": "", "accept_language": "", "raw_headers": {}}, "page": {"host": "", "path": "", "raw_path": "", "full_path": "", "full_raw_path": "", "params": {}}, "url": "", "route_id": ""}}, "reflex___state____state.reflex___state____frontend_event_exception_state": {}, "reflex___state____state.reflex___state____on_load_internal_state": {}, "reflex___state____state.reflex___state____update_vars_internal_state": {}, "reflex___state____state.reflex_gpt___chat___state____chat_state": {"did_submit_rx_state_": false, "messages_rx_state_": [], "user_did_submit_rx_state_": false}, "reflex___state____state.reflex_gpt___navigation___state____nav_state": {}}
 
 export const defaultColorMode = "system"
 export const ColorModeContext = createContext(null);
@@ -13,7 +13,8 @@ export const StateContexts = {
   reflex___state____state__reflex___state____frontend_event_exception_state: createContext(null),
   reflex___state____state__reflex___state____on_load_internal_state: createContext(null),
   reflex___state____state__reflex___state____update_vars_internal_state: createContext(null),
-  reflex___state____state__reflex_gpt___reflex_gpt____state: createContext(null),
+  reflex___state____state__reflex_gpt___chat___state____chat_state: createContext(null),
+  reflex___state____state__reflex_gpt___navigation___state____nav_state: createContext(null),
 }
 export const EventLoopContext = createContext(null);
 export const clientStorage = {"cookies": {}, "local_storage": {}, "session_storage": {}}
@@ -96,14 +97,16 @@ export function StateProvider({ children }) {
   const [reflex___state____state__reflex___state____frontend_event_exception_state, dispatch_reflex___state____state__reflex___state____frontend_event_exception_state] = useReducer(applyDelta, initialState["reflex___state____state.reflex___state____frontend_event_exception_state"])
   const [reflex___state____state__reflex___state____on_load_internal_state, dispatch_reflex___state____state__reflex___state____on_load_internal_state] = useReducer(applyDelta, initialState["reflex___state____state.reflex___state____on_load_internal_state"])
   const [reflex___state____state__reflex___state____update_vars_internal_state, dispatch_reflex___state____state__reflex___state____update_vars_internal_state] = useReducer(applyDelta, initialState["reflex___state____state.reflex___state____update_vars_internal_state"])
-  const [reflex___state____state__reflex_gpt___reflex_gpt____state, dispatch_reflex___state____state__reflex_gpt___reflex_gpt____state] = useReducer(applyDelta, initialState["reflex___state____state.reflex_gpt___reflex_gpt____state"])
+  const [reflex___state____state__reflex_gpt___chat___state____chat_state, dispatch_reflex___state____state__reflex_gpt___chat___state____chat_state] = useReducer(applyDelta, initialState["reflex___state____state.reflex_gpt___chat___state____chat_state"])
+  const [reflex___state____state__reflex_gpt___navigation___state____nav_state, dispatch_reflex___state____state__reflex_gpt___navigation___state____nav_state] = useReducer(applyDelta, initialState["reflex___state____state.reflex_gpt___navigation___state____nav_state"])
   const dispatchers = useMemo(() => {
     return {
       "reflex___state____state": dispatch_reflex___state____state,
       "reflex___state____state.reflex___state____frontend_event_exception_state": dispatch_reflex___state____state__reflex___state____frontend_event_exception_state,
       "reflex___state____state.reflex___state____on_load_internal_state": dispatch_reflex___state____state__reflex___state____on_load_internal_state,
       "reflex___state____state.reflex___state____update_vars_internal_state": dispatch_reflex___state____state__reflex___state____update_vars_internal_state,
-      "reflex___state____state.reflex_gpt___reflex_gpt____state": dispatch_reflex___state____state__reflex_gpt___reflex_gpt____state,
+      "reflex___state____state.reflex_gpt___chat___state____chat_state": dispatch_reflex___state____state__reflex_gpt___chat___state____chat_state,
+      "reflex___state____state.reflex_gpt___navigation___state____nav_state": dispatch_reflex___state____state__reflex_gpt___navigation___state____nav_state,
     }
   }, [])
 
@@ -112,7 +115,8 @@ export function StateProvider({ children }) {
     createElement(StateContexts.reflex___state____state__reflex___state____frontend_event_exception_state,{value: reflex___state____state__reflex___state____frontend_event_exception_state},
     createElement(StateContexts.reflex___state____state__reflex___state____on_load_internal_state,{value: reflex___state____state__reflex___state____on_load_internal_state},
     createElement(StateContexts.reflex___state____state__reflex___state____update_vars_internal_state,{value: reflex___state____state__reflex___state____update_vars_internal_state},
-    createElement(StateContexts.reflex___state____state__reflex_gpt___reflex_gpt____state,{value: reflex___state____state__reflex_gpt___reflex_gpt____state},
+    createElement(StateContexts.reflex___state____state__reflex_gpt___chat___state____chat_state,{value: reflex___state____state__reflex_gpt___chat___state____chat_state},
+    createElement(StateContexts.reflex___state____state__reflex_gpt___navigation___state____nav_state,{value: reflex___state____state__reflex_gpt___navigation___state____nav_state},
     createElement(DispatchContext, {value: dispatchers}, children)
-)))))  )
+))))))  )
 }

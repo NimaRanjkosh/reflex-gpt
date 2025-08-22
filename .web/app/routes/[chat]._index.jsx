@@ -1,39 +1,25 @@
 
 
 import { Fragment, useCallback, useContext, useEffect } from "react"
-import { Box as RadixThemesBox, Button as RadixThemesButton, Code as RadixThemesCode, Container as RadixThemesContainer, DropdownMenu as RadixThemesDropdownMenu, Flex as RadixThemesFlex, Heading as RadixThemesHeading, IconButton as RadixThemesIconButton, Link as RadixThemesLink, Separator as RadixThemesSeparator, Text as RadixThemesText } from "@radix-ui/themes"
+import { Box as RadixThemesBox, Button as RadixThemesButton, Code as RadixThemesCode, Container as RadixThemesContainer, DropdownMenu as RadixThemesDropdownMenu, Flex as RadixThemesFlex, Heading as RadixThemesHeading, Link as RadixThemesLink, Separator as RadixThemesSeparator, Text as RadixThemesText, TextArea as RadixThemesTextArea } from "@radix-ui/themes"
 import { Link as ReactRouterLink } from "react-router"
-import { Facebook as LucideFacebook, Instagram as LucideInstagram, Linkedin as LucideLinkedin, Menu as LucideMenu, Moon as LucideMoon, Sun as LucideSun, Twitter as LucideTwitter } from "lucide-react"
-import { ColorModeContext, EventLoopContext } from "$/utils/context"
-import { Event, isTrue } from "$/utils/state"
+import { Facebook as LucideFacebook, Instagram as LucideInstagram, Linkedin as LucideLinkedin, Menu as LucideMenu, Twitter as LucideTwitter } from "lucide-react"
+import { ColorModeContext, EventLoopContext, StateContexts } from "$/utils/context"
+import { Event, getRefValue, getRefValues, isTrue } from "$/utils/state"
+import ReactMarkdown from "react-markdown"
+import "katex/dist/katex.min.css"
+import remarkMath from "remark-math"
+import remarkGfm from "remark-gfm"
+import remarkUnwrapImages from "remark-unwrap-images"
+import rehypeKatex from "rehype-katex"
+import rehypeRaw from "rehype-raw"
+import { PrismAsyncLight as SyntaxHighlighter } from "react-syntax-highlighter"
+import oneLight from "react-syntax-highlighter/dist/esm/styles/prism/one-light"
+import oneDark from "react-syntax-highlighter/dist/esm/styles/prism/one-dark"
+import { Root as RadixFormRoot } from "@radix-ui/react-form"
 import { jsx } from "@emotion/react"
 
 
-
-function Fragment_316481211133211762242431592816873109377 () {
-  
-  const { resolvedColorMode } = useContext(ColorModeContext)
-
-
-
-
-
-  
-  return (
-    jsx(
-Fragment,
-{},
-((resolvedColorMode === "light") ? (jsx(
-Fragment,
-{},
-jsx(LucideSun,{},)
-,)) : (jsx(
-Fragment,
-{},
-jsx(LucideMoon,{},)
-,))),)
-  )
-}
 
 function Dropdownmenu__item_78259143428191714580501905205005467293 () {
   
@@ -73,6 +59,100 @@ RadixThemesDropdownMenu.Item,
   )
 }
 
+function Box_171455763533360694650585018840936501957 () {
+  
+  const reflex___state____state__reflex_gpt___chat___state____chat_state = useContext(StateContexts.reflex___state____state__reflex_gpt___chat___state____chat_state)
+
+
+
+
+
+  
+  return (
+    jsx(
+RadixThemesBox,
+{css:({ ["width"] : "100%" })},
+reflex___state____state__reflex_gpt___chat___state____chat_state.messages_rx_state_.map((chat_message_rx_state_,index_0b4c7c93633e84b6)=>(jsx(
+RadixThemesBox,
+{css:({ ["width"] : "100%" }),key:index_0b4c7c93633e84b6},
+jsx(
+RadixThemesBox,
+{css:({ ["textAlign"] : (chat_message_rx_state_["is_bot"] ? "left" : "right"), ["marginTop"] : "1em" })},
+jsx(
+ReactMarkdown,
+{components:ComponentMap_a5553a20fba0d7498da9ba7265557b15(),css:({ ["backgroundColor"] : (chat_message_rx_state_["is_bot"] ? "var(--mauve-4)" : "var(--blue-4)"), ["color"] : (chat_message_rx_state_["is_bot"] ? "var(--mauve-12)" : "var(--blue-12)"), ["display"] : "inline-block", ["padding"] : "1em", ["borderRadius"] : "8px", ["@media screen and (min-width: 0)"] : ({ ["maxWidth"] : "30em" }), ["@media screen and (min-width: 30em)"] : ({ ["maxWidth"] : "30em" }), ["@media screen and (min-width: 48em)"] : ({ ["maxWidth"] : "50em" }), ["@media screen and (min-width: 62em)"] : ({ ["maxWidth"] : "50em" }), ["@media screen and (min-width: 80em)"] : ({ ["maxWidth"] : "50em" }), ["@media screen and (min-width: 96em)"] : ({ ["maxWidth"] : "50em" }) }),rehypePlugins:[rehypeKatex, rehypeRaw],remarkPlugins:[remarkMath, remarkGfm, remarkUnwrapImages]},
+chat_message_rx_state_["message"]
+,),),))),)
+  )
+}
+
+function Root_67307579233438140451645407764231573661 () {
+  
+  const [addEvents, connectErrors] = useContext(EventLoopContext);
+
+  
+    const handleSubmit_2d071313ff21dcbd4ec2d5efd479ec0a = useCallback((ev) => {
+        const $form = ev.target
+        ev.preventDefault()
+        const form_data = {...Object.fromEntries(new FormData($form).entries()), ...({  })};
+
+        (((...args) => (addEvents([(Event("reflex___state____state.reflex_gpt___chat___state____chat_state.handling_submit", ({ ["form_data"] : form_data }), ({  })))], args, ({  }))))(ev));
+
+        if (true) {
+            $form.reset()
+        }
+    })
+    
+
+
+
+
+  
+  return (
+    jsx(
+RadixFormRoot,
+{className:"Root ",css:({ ["width"] : "100%" }),onSubmit:handleSubmit_2d071313ff21dcbd4ec2d5efd479ec0a},
+jsx(
+RadixThemesFlex,
+{align:"start",className:"rx-Stack",direction:"column",gap:"3"},
+jsx(RadixThemesTextArea,{css:({ ["& textarea"] : null, ["width"] : "100%" }),name:"message",placeholder:"Your message",required:true},)
+,jsx(
+RadixThemesFlex,
+{align:"start",className:"rx-Stack",direction:"row",gap:"3"},
+jsx(
+RadixThemesButton,
+{type:"submit"},
+"Submit"
+,),jsx(Fragment_114065205177711263837194906430059584370,{},)
+,),),)
+  )
+}
+
+function Fragment_114065205177711263837194906430059584370 () {
+  
+  const reflex___state____state__reflex_gpt___chat___state____chat_state = useContext(StateContexts.reflex___state____state__reflex_gpt___chat___state____chat_state)
+
+
+
+
+
+  
+  return (
+    jsx(
+Fragment,
+{},
+(reflex___state____state__reflex_gpt___chat___state____chat_state.user_did_submit_rx_state_ ? (jsx(
+Fragment,
+{},
+jsx(
+RadixThemesText,
+{as:"p"},
+"Submitted"
+,),)) : (jsx(Fragment,{},)
+)),)
+  )
+}
+
 function Dropdownmenu__item_24723954489570581789777515458957729503 () {
   
   const [addEvents, connectErrors] = useContext(EventLoopContext);
@@ -92,25 +172,17 @@ RadixThemesDropdownMenu.Item,
   )
 }
 
-function Iconbutton_37756489123930725173988118574398723960 () {
-  
-  const { toggleColorMode } = useContext(ColorModeContext)
-  const [addEvents, connectErrors] = useContext(EventLoopContext);
-
-
-  const on_click_9922dd3e837b9e087c86a2522c2c93f8 = useCallback(toggleColorMode, [addEvents, Event, toggleColorMode])
+        function ComponentMap_a5553a20fba0d7498da9ba7265557b15 () {
+            
+  const { resolvedColorMode } = useContext(ColorModeContext)
 
 
 
-  
-  return (
-    jsx(
-RadixThemesIconButton,
-{css:({ ["padding"] : "6px", ["position"] : "fixed", ["bottom"] : "2rem", ["right"] : "2rem", ["background"] : "transparent", ["color"] : "inherit", ["zIndex"] : "20", ["&:hover"] : ({ ["cursor"] : "pointer" }) }),onClick:on_click_9922dd3e837b9e087c86a2522c2c93f8},
-jsx(Fragment_316481211133211762242431592816873109377,{},)
-,)
-  )
-}
+            return (
+                ({ ["h1"] : (({node, children, ...props}) => (jsx(RadixThemesHeading,{as:"h1",css:({ ["marginTop"] : "0.5em", ["marginBottom"] : "0.5em" }),size:"6",...props},children,))), ["h2"] : (({node, children, ...props}) => (jsx(RadixThemesHeading,{as:"h2",css:({ ["marginTop"] : "0.5em", ["marginBottom"] : "0.5em" }),size:"5",...props},children,))), ["h3"] : (({node, children, ...props}) => (jsx(RadixThemesHeading,{as:"h3",css:({ ["marginTop"] : "0.5em", ["marginBottom"] : "0.5em" }),size:"4",...props},children,))), ["h4"] : (({node, children, ...props}) => (jsx(RadixThemesHeading,{as:"h4",css:({ ["marginTop"] : "0.5em", ["marginBottom"] : "0.5em" }),size:"3",...props},children,))), ["h5"] : (({node, children, ...props}) => (jsx(RadixThemesHeading,{as:"h5",css:({ ["marginTop"] : "0.5em", ["marginBottom"] : "0.5em" }),size:"2",...props},children,))), ["h6"] : (({node, children, ...props}) => (jsx(RadixThemesHeading,{as:"h6",css:({ ["marginTop"] : "0.5em", ["marginBottom"] : "0.5em" }),size:"1",...props},children,))), ["p"] : (({node, children, ...props}) => (jsx(RadixThemesText,{as:"p",css:({ ["marginTop"] : "1em", ["marginBottom"] : "1em" }),...props},children,))), ["ul"] : (({node, children, ...props}) => (jsx("ul",{css:({ ["listStyleType"] : "disc", ["marginTop"] : "1em", ["marginBottom"] : "1em", ["marginLeft"] : "1.5rem", ["direction"] : "column" })},children,))), ["ol"] : (({node, children, ...props}) => (jsx("ol",{css:({ ["listStyleType"] : "decimal", ["marginTop"] : "1em", ["marginBottom"] : "1em", ["marginLeft"] : "1.5rem", ["direction"] : "column" })},children,))), ["li"] : (({node, children, ...props}) => (jsx("li",{css:({ ["marginTop"] : "0.5em", ["marginBottom"] : "0.5em" })},children,))), ["a"] : (({node, children, ...props}) => (jsx(RadixThemesLink,{css:({ ["&:hover"] : ({ ["color"] : "var(--accent-8)" }) }),href:"#",...props},children,))), ["code"] : (({node, inline, className, children, ...props}) => { const match = (className || '').match(/language-(?<lang>.*)/); let _language = match ? match[1] : '';  ;             return inline ? (                 jsx(RadixThemesCode,{...props},children,)             ) : (                 jsx(SyntaxHighlighter,{children:((Array.isArray(children)) ? children.join("\n") : children),css:({ ["marginTop"] : "1em", ["marginBottom"] : "1em" }),language:_language,style:((resolvedColorMode === "light") ? oneLight : oneDark),wrapLongLines:true,...props},)             );         }) })
+            )
+        }
+        
 
 export default function Component() {
     
@@ -205,33 +277,16 @@ jsx(Dropdownmenu__item_24723954489570581789777515458957729503,{},)
 ,),),),),),jsx(
 Fragment,
 {},
-jsx(Iconbutton_37756489123930725173988118574398723960,{},)
-,jsx(
+jsx(
 RadixThemesFlex,
-{align:"start",className:"rx-Stack",css:({ ["minHeight"] : "85vh" }),direction:"column",justify:"center",gap:"5"},
+{align:"start",className:"rx-Stack",css:({ ["margin"] : "3rem auto", ["minHeight"] : "85vh" }),direction:"column",justify:"center",gap:"5"},
 jsx(
 RadixThemesHeading,
 {size:"9"},
-"Welcome to Reflex GPT!"
-,),jsx(
-RadixThemesText,
-{as:"p",size:"5"},
-"Get started by editing "
-,jsx(
-RadixThemesCode,
-{},
-"reflex_gpt/reflex_gpt.py"
+"Chat here!"
+,),jsx(Box_171455763533360694650585018840936501957,{},)
+,jsx(Root_67307579233438140451645407764231573661,{},)
 ,),),jsx(
-RadixThemesLink,
-{asChild:true,css:({ ["&:hover"] : ({ ["color"] : "var(--accent-8)" }) })},
-jsx(
-ReactRouterLink,
-{target:(true ? "_blank" : ""),to:"https://reflex.dev/docs/getting-started/introduction/"},
-jsx(
-RadixThemesButton,
-{},
-"Check out our docs!"
-,),),),),),jsx(
 "footer",
 {css:({ ["width"] : "100%" })},
 jsx(
@@ -430,7 +485,7 @@ jsx(LucideLinkedin,{},)
 ,),),),),),),),jsx(
 "title",
 {},
-"ReflexGpt | Index"
+"ReflexGpt | Chat"
 ,),jsx("meta",{content:"favicon.ico",property:"og:image"},)
 ,)
   )

@@ -16,6 +16,12 @@ type Pages = {
   "/": {
     params: {};
   };
+  "/about": {
+    params: {};
+  };
+  "/chat": {
+    params: {};
+  };
   "/*": {
     params: {
       "*": string;
@@ -33,7 +39,15 @@ type RouteFiles = {
   };
   "root.jsx": {
     id: "root";
-    page: "/404" | "/" | "/*";
+    page: "/404" | "/" | "/about" | "/chat" | "/*";
+  };
+  "routes/[about]._index.jsx": {
+    id: "routes/[about]._index";
+    page: "/about";
+  };
+  "routes/[chat]._index.jsx": {
+    id: "routes/[chat]._index";
+    page: "/chat";
   };
   "routes/_index.jsx": {
     id: "routes/_index";
