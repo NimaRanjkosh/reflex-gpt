@@ -10,6 +10,25 @@ import { jsx } from "@emotion/react"
 
 
 
+function Dropdownmenu__item_78259143428191714580501905205005467293 () {
+  
+  const [addEvents, connectErrors] = useContext(EventLoopContext);
+
+
+  const on_click_2c894a0ac7061de32d1bc4170d98a2b5 = useCallback(((_e) => (addEvents([(Event("reflex___state____state.reflex_gpt___navigation___state____nav_state.to_chat", ({  }), ({  })))], [_e], ({  })))), [addEvents, Event])
+
+
+
+  
+  return (
+    jsx(
+RadixThemesDropdownMenu.Item,
+{onClick:on_click_2c894a0ac7061de32d1bc4170d98a2b5},
+"Chat"
+,)
+  )
+}
+
 function Fragment_316481211133211762242431592816873109377 () {
   
   const { resolvedColorMode } = useContext(ColorModeContext)
@@ -32,25 +51,6 @@ Fragment,
 {},
 jsx(LucideMoon,{},)
 ,))),)
-  )
-}
-
-function Dropdownmenu__item_78259143428191714580501905205005467293 () {
-  
-  const [addEvents, connectErrors] = useContext(EventLoopContext);
-
-
-  const on_click_2c894a0ac7061de32d1bc4170d98a2b5 = useCallback(((_e) => (addEvents([(Event("reflex___state____state.reflex_gpt___navigation___state____nav_state.to_chat", ({  }), ({  })))], [_e], ({  })))), [addEvents, Event])
-
-
-
-  
-  return (
-    jsx(
-RadixThemesDropdownMenu.Item,
-{onClick:on_click_2c894a0ac7061de32d1bc4170d98a2b5},
-"Chat"
-,)
   )
 }
 

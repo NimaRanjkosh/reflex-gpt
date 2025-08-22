@@ -1,7 +1,8 @@
-import asyncio
 from typing import List
 
 import reflex as rx
+
+from . import ai
 
 class ChatMessage(rx.Base):
     message:str
@@ -26,6 +27,24 @@ class ChatState(rx.State):
                     is_bot = is_bot,
                 )
             )
+        
+    def get_gpt_messages(self):
+        gpt_messages = [
+            {
+                "role": "system",
+                "content": "You are a interior architect and designer and you are a green designer that clean energy is a big deal for you. You will help the user with their interior design questions and provide suggestions based on the user's input.respond in markdown"
+            }
+        ]
+        for chat_message in self.messages:
+            role = "user" if not chat_message.is_bot else "system"
+            gpt_messages.append(
+                {
+                    "role": role,
+                    "content": chat_message.message
+                }
+            )
+        
+        return gpt_messages
     
     async def handling_submit(self, form_data:dict):
         print("Form submitted with data:", form_data)
@@ -34,7 +53,9 @@ class ChatState(rx.State):
             self.did_submit = True
             self.append_message(message = user_message, is_bot = False)
             yield
-            await asyncio.sleep(2)
+            gpt_messages = self.get_gpt_messages()
+            bot_response = ai.get_llm_response(gpt_messages)
+            # await asyncio.sleep(2)
             self.did_submit = False
-            self.append_message(message = user_message, is_bot = True)
+            self.append_message(message = bot_response, is_bot = True)
             yield
