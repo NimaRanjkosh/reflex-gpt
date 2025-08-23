@@ -29,22 +29,21 @@ RadixThemesDropdownMenu.Item,
   )
 }
 
-function Iconbutton_37756489123930725173988118574398723960 () {
+function Dropdownmenu__item_78259143428191714580501905205005467293 () {
   
-  const { toggleColorMode } = useContext(ColorModeContext)
   const [addEvents, connectErrors] = useContext(EventLoopContext);
 
 
-  const on_click_9922dd3e837b9e087c86a2522c2c93f8 = useCallback(toggleColorMode, [addEvents, Event, toggleColorMode])
+  const on_click_2c894a0ac7061de32d1bc4170d98a2b5 = useCallback(((_e) => (addEvents([(Event("reflex___state____state.reflex_gpt___navigation___state____nav_state.to_chat", ({  }), ({  })))], [_e], ({  })))), [addEvents, Event])
 
 
 
   
   return (
     jsx(
-RadixThemesIconButton,
-{css:({ ["padding"] : "6px", ["position"] : "fixed", ["bottom"] : "2rem", ["right"] : "2rem", ["background"] : "transparent", ["color"] : "inherit", ["zIndex"] : "20", ["&:hover"] : ({ ["cursor"] : "pointer" }) }),onClick:on_click_9922dd3e837b9e087c86a2522c2c93f8},
-jsx(Fragment_316481211133211762242431592816873109377,{},)
+RadixThemesDropdownMenu.Item,
+{onClick:on_click_2c894a0ac7061de32d1bc4170d98a2b5},
+"Chat"
 ,)
   )
 }
@@ -93,21 +92,22 @@ jsx(LucideMoon,{},)
   )
 }
 
-function Dropdownmenu__item_78259143428191714580501905205005467293 () {
+function Iconbutton_37756489123930725173988118574398723960 () {
   
+  const { toggleColorMode } = useContext(ColorModeContext)
   const [addEvents, connectErrors] = useContext(EventLoopContext);
 
 
-  const on_click_2c894a0ac7061de32d1bc4170d98a2b5 = useCallback(((_e) => (addEvents([(Event("reflex___state____state.reflex_gpt___navigation___state____nav_state.to_chat", ({  }), ({  })))], [_e], ({  })))), [addEvents, Event])
+  const on_click_9922dd3e837b9e087c86a2522c2c93f8 = useCallback(toggleColorMode, [addEvents, Event, toggleColorMode])
 
 
 
   
   return (
     jsx(
-RadixThemesDropdownMenu.Item,
-{onClick:on_click_2c894a0ac7061de32d1bc4170d98a2b5},
-"Chat"
+RadixThemesIconButton,
+{css:({ ["padding"] : "6px", ["position"] : "fixed", ["bottom"] : "2rem", ["right"] : "2rem", ["background"] : "transparent", ["color"] : "inherit", ["zIndex"] : "20", ["&:hover"] : ({ ["cursor"] : "pointer" }) }),onClick:on_click_9922dd3e837b9e087c86a2522c2c93f8},
+jsx(Fragment_316481211133211762242431592816873109377,{},)
 ,)
   )
 }

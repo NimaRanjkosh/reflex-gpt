@@ -29,6 +29,44 @@ RadixThemesDropdownMenu.Item,
   )
 }
 
+function Dropdownmenu__item_78259143428191714580501905205005467293 () {
+  
+  const [addEvents, connectErrors] = useContext(EventLoopContext);
+
+
+  const on_click_2c894a0ac7061de32d1bc4170d98a2b5 = useCallback(((_e) => (addEvents([(Event("reflex___state____state.reflex_gpt___navigation___state____nav_state.to_chat", ({  }), ({  })))], [_e], ({  })))), [addEvents, Event])
+
+
+
+  
+  return (
+    jsx(
+RadixThemesDropdownMenu.Item,
+{onClick:on_click_2c894a0ac7061de32d1bc4170d98a2b5},
+"Chat"
+,)
+  )
+}
+
+function Dropdownmenu__item_24723954489570581789777515458957729503 () {
+  
+  const [addEvents, connectErrors] = useContext(EventLoopContext);
+
+
+  const on_click_65dc12a5fb3b1a2fddc7ded837f9fe42 = useCallback(((_e) => (addEvents([(Event("reflex___state____state.reflex_gpt___navigation___state____nav_state.to_home", ({  }), ({  })))], [_e], ({  })))), [addEvents, Event])
+
+
+
+  
+  return (
+    jsx(
+RadixThemesDropdownMenu.Item,
+{onClick:on_click_65dc12a5fb3b1a2fddc7ded837f9fe42},
+"Home"
+,)
+  )
+}
+
 function Link_185971520537207162323604121356663882425 () {
   
   const { resolvedColorMode } = useContext(ColorModeContext)
@@ -66,45 +104,6 @@ jsx("path",{d:"M0 11.5999V0.399902H8.96V4.8799H6.72V2.6399H2.24V4.8799H6.72V7.11
   )
 }
 
-function Iconbutton_37756489123930725173988118574398723960 () {
-  
-  const { toggleColorMode } = useContext(ColorModeContext)
-  const [addEvents, connectErrors] = useContext(EventLoopContext);
-
-
-  const on_click_9922dd3e837b9e087c86a2522c2c93f8 = useCallback(toggleColorMode, [addEvents, Event, toggleColorMode])
-
-
-
-  
-  return (
-    jsx(
-RadixThemesIconButton,
-{css:({ ["padding"] : "6px", ["position"] : "fixed", ["bottom"] : "2rem", ["right"] : "2rem", ["background"] : "transparent", ["color"] : "inherit", ["zIndex"] : "20", ["&:hover"] : ({ ["cursor"] : "pointer" }) }),onClick:on_click_9922dd3e837b9e087c86a2522c2c93f8},
-jsx(Fragment_316481211133211762242431592816873109377,{},)
-,)
-  )
-}
-
-function Dropdownmenu__item_24723954489570581789777515458957729503 () {
-  
-  const [addEvents, connectErrors] = useContext(EventLoopContext);
-
-
-  const on_click_65dc12a5fb3b1a2fddc7ded837f9fe42 = useCallback(((_e) => (addEvents([(Event("reflex___state____state.reflex_gpt___navigation___state____nav_state.to_home", ({  }), ({  })))], [_e], ({  })))), [addEvents, Event])
-
-
-
-  
-  return (
-    jsx(
-RadixThemesDropdownMenu.Item,
-{onClick:on_click_65dc12a5fb3b1a2fddc7ded837f9fe42},
-"Home"
-,)
-  )
-}
-
 function Fragment_316481211133211762242431592816873109377 () {
   
   const { resolvedColorMode } = useContext(ColorModeContext)
@@ -130,21 +129,22 @@ jsx(LucideMoon,{},)
   )
 }
 
-function Dropdownmenu__item_78259143428191714580501905205005467293 () {
+function Iconbutton_37756489123930725173988118574398723960 () {
   
+  const { toggleColorMode } = useContext(ColorModeContext)
   const [addEvents, connectErrors] = useContext(EventLoopContext);
 
 
-  const on_click_2c894a0ac7061de32d1bc4170d98a2b5 = useCallback(((_e) => (addEvents([(Event("reflex___state____state.reflex_gpt___navigation___state____nav_state.to_chat", ({  }), ({  })))], [_e], ({  })))), [addEvents, Event])
+  const on_click_9922dd3e837b9e087c86a2522c2c93f8 = useCallback(toggleColorMode, [addEvents, Event, toggleColorMode])
 
 
 
   
   return (
     jsx(
-RadixThemesDropdownMenu.Item,
-{onClick:on_click_2c894a0ac7061de32d1bc4170d98a2b5},
-"Chat"
+RadixThemesIconButton,
+{css:({ ["padding"] : "6px", ["position"] : "fixed", ["bottom"] : "2rem", ["right"] : "2rem", ["background"] : "transparent", ["color"] : "inherit", ["zIndex"] : "20", ["&:hover"] : ({ ["cursor"] : "pointer" }) }),onClick:on_click_9922dd3e837b9e087c86a2522c2c93f8},
+jsx(Fragment_316481211133211762242431592816873109377,{},)
 ,)
   )
 }

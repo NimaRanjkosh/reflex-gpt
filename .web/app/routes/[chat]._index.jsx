@@ -21,33 +21,6 @@ import { jsx } from "@emotion/react"
 
 
 
-function Box_234368619528846631270840088488457238567 () {
-  
-  const reflex___state____state__reflex_gpt___chat___state____chat_state = useContext(StateContexts.reflex___state____state__reflex_gpt___chat___state____chat_state)
-
-
-
-
-
-  
-  return (
-    jsx(
-RadixThemesBox,
-{css:({ ["width"] : "100%" })},
-reflex___state____state__reflex_gpt___chat___state____chat_state.messages_rx_state_.map((chat_message_rx_state_,index_596c97f9babf2313)=>(jsx(
-RadixThemesBox,
-{css:({ ["width"] : "100%" }),key:index_596c97f9babf2313},
-jsx(
-RadixThemesBox,
-{css:({ ["textAlign"] : (chat_message_rx_state_["is_bot"] ? "left" : "right"), ["marginTop"] : "1em" })},
-jsx(
-ReactMarkdown,
-{components:ComponentMap_a5553a20fba0d7498da9ba7265557b15(),css:({ ["backgroundColor"] : (chat_message_rx_state_["is_bot"] ? "var(--mauve-4)" : "var(--blue-4)"), ["color"] : (chat_message_rx_state_["is_bot"] ? "var(--mauve-12)" : "var(--blue-12)"), ["display"] : "inline-block", ["padding"] : "1em", ["borderRadius"] : "8px", ["@media screen and (min-width: 0)"] : ({ ["maxWidth"] : "30em" }), ["@media screen and (min-width: 30em)"] : ({ ["maxWidth"] : "30em" }), ["@media screen and (min-width: 48em)"] : ({ ["maxWidth"] : "50em" }), ["@media screen and (min-width: 62em)"] : ({ ["maxWidth"] : "50em" }), ["@media screen and (min-width: 80em)"] : ({ ["maxWidth"] : "50em" }), ["@media screen and (min-width: 96em)"] : ({ ["maxWidth"] : "50em" }) }),rehypePlugins:[rehypeKatex, rehypeRaw],remarkPlugins:[remarkMath, remarkGfm, remarkUnwrapImages]},
-chat_message_rx_state_["message"]
-,),),))),)
-  )
-}
-
 function Dropdownmenu__item_160771094599294285760928589324466380096 () {
   
   const [addEvents, connectErrors] = useContext(EventLoopContext);
@@ -67,28 +40,22 @@ RadixThemesDropdownMenu.Item,
   )
 }
 
-function Fragment_114065205177711263837194906430059584370 () {
+function Dropdownmenu__item_78259143428191714580501905205005467293 () {
   
-  const reflex___state____state__reflex_gpt___chat___state____chat_state = useContext(StateContexts.reflex___state____state__reflex_gpt___chat___state____chat_state)
+  const [addEvents, connectErrors] = useContext(EventLoopContext);
 
 
+  const on_click_2c894a0ac7061de32d1bc4170d98a2b5 = useCallback(((_e) => (addEvents([(Event("reflex___state____state.reflex_gpt___navigation___state____nav_state.to_chat", ({  }), ({  })))], [_e], ({  })))), [addEvents, Event])
 
 
 
   
   return (
     jsx(
-Fragment,
-{},
-(reflex___state____state__reflex_gpt___chat___state____chat_state.user_did_submit_rx_state_ ? (jsx(
-Fragment,
-{},
-jsx(
-RadixThemesText,
-{as:"p"},
-"Submitted"
-,),)) : (jsx(Fragment,{},)
-)),)
+RadixThemesDropdownMenu.Item,
+{onClick:on_click_2c894a0ac7061de32d1bc4170d98a2b5},
+"Chat"
+,)
   )
 }
 
@@ -103,6 +70,25 @@ RadixThemesText,
             )
         }
         
+
+function Dropdownmenu__item_24723954489570581789777515458957729503 () {
+  
+  const [addEvents, connectErrors] = useContext(EventLoopContext);
+
+
+  const on_click_65dc12a5fb3b1a2fddc7ded837f9fe42 = useCallback(((_e) => (addEvents([(Event("reflex___state____state.reflex_gpt___navigation___state____nav_state.to_home", ({  }), ({  })))], [_e], ({  })))), [addEvents, Event])
+
+
+
+  
+  return (
+    jsx(
+RadixThemesDropdownMenu.Item,
+{onClick:on_click_65dc12a5fb3b1a2fddc7ded837f9fe42},
+"Home"
+,)
+  )
+}
 
 function Root_67307579233438140451645407764231573661 () {
   
@@ -146,41 +132,55 @@ RadixThemesButton,
   )
 }
 
-function Dropdownmenu__item_24723954489570581789777515458957729503 () {
+function Fragment_114065205177711263837194906430059584370 () {
   
-  const [addEvents, connectErrors] = useContext(EventLoopContext);
+  const reflex___state____state__reflex_gpt___chat___state____chat_state = useContext(StateContexts.reflex___state____state__reflex_gpt___chat___state____chat_state)
 
 
-  const on_click_65dc12a5fb3b1a2fddc7ded837f9fe42 = useCallback(((_e) => (addEvents([(Event("reflex___state____state.reflex_gpt___navigation___state____nav_state.to_home", ({  }), ({  })))], [_e], ({  })))), [addEvents, Event])
 
 
 
   
   return (
     jsx(
-RadixThemesDropdownMenu.Item,
-{onClick:on_click_65dc12a5fb3b1a2fddc7ded837f9fe42},
-"Home"
-,)
+Fragment,
+{},
+(reflex___state____state__reflex_gpt___chat___state____chat_state.user_did_submit_rx_state_ ? (jsx(
+Fragment,
+{},
+jsx(
+RadixThemesText,
+{as:"p"},
+"Submitted"
+,),)) : (jsx(Fragment,{},)
+)),)
   )
 }
 
-function Dropdownmenu__item_78259143428191714580501905205005467293 () {
+function Box_88310725130068237759382822567110227664 () {
   
-  const [addEvents, connectErrors] = useContext(EventLoopContext);
+  const reflex___state____state__reflex_gpt___chat___state____chat_state = useContext(StateContexts.reflex___state____state__reflex_gpt___chat___state____chat_state)
 
 
-  const on_click_2c894a0ac7061de32d1bc4170d98a2b5 = useCallback(((_e) => (addEvents([(Event("reflex___state____state.reflex_gpt___navigation___state____nav_state.to_chat", ({  }), ({  })))], [_e], ({  })))), [addEvents, Event])
 
 
 
   
   return (
     jsx(
-RadixThemesDropdownMenu.Item,
-{onClick:on_click_2c894a0ac7061de32d1bc4170d98a2b5},
-"Chat"
-,)
+RadixThemesBox,
+{css:({ ["width"] : "100%" })},
+reflex___state____state__reflex_gpt___chat___state____chat_state.messages_rx_state_.map((chat_message_rx_state_,index_351e1fc91ae933f1)=>(jsx(
+RadixThemesBox,
+{css:({ ["width"] : "100%" }),key:index_351e1fc91ae933f1},
+jsx(
+RadixThemesBox,
+{css:({ ["textAlign"] : (chat_message_rx_state_["is_bot"] ? "left" : "right"), ["marginTop"] : "1em" })},
+jsx(
+ReactMarkdown,
+{components:ComponentMap_a5553a20fba0d7498da9ba7265557b15(),css:({ ["backgroundColor"] : (chat_message_rx_state_["is_bot"] ? "var(--mauve-4)" : "var(--blue-4)"), ["color"] : (chat_message_rx_state_["is_bot"] ? "var(--mauve-12)" : "var(--blue-12)"), ["display"] : "inline-block", ["padding"] : "1em", ["borderRadius"] : "8px", ["@media screen and (min-width: 0)"] : ({ ["maxWidth"] : "30em" }), ["@media screen and (min-width: 30em)"] : ({ ["maxWidth"] : "30em" }), ["@media screen and (min-width: 48em)"] : ({ ["maxWidth"] : "50em" }), ["@media screen and (min-width: 62em)"] : ({ ["maxWidth"] : "50em" }), ["@media screen and (min-width: 80em)"] : ({ ["maxWidth"] : "50em" }), ["@media screen and (min-width: 96em)"] : ({ ["maxWidth"] : "50em" }) }),rehypePlugins:[rehypeKatex, rehypeRaw],remarkPlugins:[remarkMath, remarkGfm, remarkUnwrapImages]},
+chat_message_rx_state_["message"]
+,),),))),)
   )
 }
 
@@ -284,7 +284,7 @@ jsx(
 RadixThemesHeading,
 {size:"9"},
 "Chat here!"
-,),jsx(Box_234368619528846631270840088488457238567,{},)
+,),jsx(Box_88310725130068237759382822567110227664,{},)
 ,jsx(Root_67307579233438140451645407764231573661,{},)
 ,),),jsx(
 "footer",
