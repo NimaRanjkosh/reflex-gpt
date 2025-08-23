@@ -1,5 +1,5 @@
 import reflex as rx
-import sqlalchemy as sa
+import sqlalchemy
 
 from datetime import datetime, timezone
 from sqlmodel import Field
@@ -13,21 +13,21 @@ def get_utc_now() -> datetime:
 class Chat(rx.Model, table=True):
     # id
     # message ??
-    # title: str
+    title: str
     created_at: datetime = Field(
         default_factory=get_utc_now,
-        sa_type = sa.DateTime(timezone=True),
+        sa_type = sqlalchemy.DateTime(timezone=True),
         sa_column_kwargs={
-            "server_default": sa.func.now()
+            "server_default": sqlalchemy.func.now()
         },
         nullable=False,
     )
     updated_at: datetime = Field(
         default_factory=get_utc_now,
-        sa_type = sa.DateTime(timezone=True),
+        sa_type = sqlalchemy.DateTime(timezone=True),
         sa_column_kwargs={
-            "onupdate": sa.func.now(),
-            "server_default": sa.func.now()
+            "onupdate": sqlalchemy.func.now(),
+            "server_default": sqlalchemy.func.now()
         },
         nullable=False,
     )
