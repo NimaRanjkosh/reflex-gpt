@@ -21,6 +21,33 @@ import { jsx } from "@emotion/react"
 
 
 
+function Box_234368619528846631270840088488457238567 () {
+  
+  const reflex___state____state__reflex_gpt___chat___state____chat_state = useContext(StateContexts.reflex___state____state__reflex_gpt___chat___state____chat_state)
+
+
+
+
+
+  
+  return (
+    jsx(
+RadixThemesBox,
+{css:({ ["width"] : "100%" })},
+reflex___state____state__reflex_gpt___chat___state____chat_state.messages_rx_state_.map((chat_message_rx_state_,index_596c97f9babf2313)=>(jsx(
+RadixThemesBox,
+{css:({ ["width"] : "100%" }),key:index_596c97f9babf2313},
+jsx(
+RadixThemesBox,
+{css:({ ["textAlign"] : (chat_message_rx_state_["is_bot"] ? "left" : "right"), ["marginTop"] : "1em" })},
+jsx(
+ReactMarkdown,
+{components:ComponentMap_a5553a20fba0d7498da9ba7265557b15(),css:({ ["backgroundColor"] : (chat_message_rx_state_["is_bot"] ? "var(--mauve-4)" : "var(--blue-4)"), ["color"] : (chat_message_rx_state_["is_bot"] ? "var(--mauve-12)" : "var(--blue-12)"), ["display"] : "inline-block", ["padding"] : "1em", ["borderRadius"] : "8px", ["@media screen and (min-width: 0)"] : ({ ["maxWidth"] : "30em" }), ["@media screen and (min-width: 30em)"] : ({ ["maxWidth"] : "30em" }), ["@media screen and (min-width: 48em)"] : ({ ["maxWidth"] : "50em" }), ["@media screen and (min-width: 62em)"] : ({ ["maxWidth"] : "50em" }), ["@media screen and (min-width: 80em)"] : ({ ["maxWidth"] : "50em" }), ["@media screen and (min-width: 96em)"] : ({ ["maxWidth"] : "50em" }) }),rehypePlugins:[rehypeKatex, rehypeRaw],remarkPlugins:[remarkMath, remarkGfm, remarkUnwrapImages]},
+chat_message_rx_state_["message"]
+,),),))),)
+  )
+}
+
 function Dropdownmenu__item_160771094599294285760928589324466380096 () {
   
   const [addEvents, connectErrors] = useContext(EventLoopContext);
@@ -64,6 +91,18 @@ RadixThemesText,
 )),)
   )
 }
+
+        function ComponentMap_a5553a20fba0d7498da9ba7265557b15 () {
+            
+  const { resolvedColorMode } = useContext(ColorModeContext)
+
+
+
+            return (
+                ({ ["h1"] : (({node, children, ...props}) => (jsx(RadixThemesHeading,{as:"h1",css:({ ["marginTop"] : "0.5em", ["marginBottom"] : "0.5em" }),size:"6",...props},children,))), ["h2"] : (({node, children, ...props}) => (jsx(RadixThemesHeading,{as:"h2",css:({ ["marginTop"] : "0.5em", ["marginBottom"] : "0.5em" }),size:"5",...props},children,))), ["h3"] : (({node, children, ...props}) => (jsx(RadixThemesHeading,{as:"h3",css:({ ["marginTop"] : "0.5em", ["marginBottom"] : "0.5em" }),size:"4",...props},children,))), ["h4"] : (({node, children, ...props}) => (jsx(RadixThemesHeading,{as:"h4",css:({ ["marginTop"] : "0.5em", ["marginBottom"] : "0.5em" }),size:"3",...props},children,))), ["h5"] : (({node, children, ...props}) => (jsx(RadixThemesHeading,{as:"h5",css:({ ["marginTop"] : "0.5em", ["marginBottom"] : "0.5em" }),size:"2",...props},children,))), ["h6"] : (({node, children, ...props}) => (jsx(RadixThemesHeading,{as:"h6",css:({ ["marginTop"] : "0.5em", ["marginBottom"] : "0.5em" }),size:"1",...props},children,))), ["p"] : (({node, children, ...props}) => (jsx(RadixThemesText,{as:"p",css:({ ["marginTop"] : "1em", ["marginBottom"] : "1em" }),...props},children,))), ["ul"] : (({node, children, ...props}) => (jsx("ul",{css:({ ["listStyleType"] : "disc", ["marginTop"] : "1em", ["marginBottom"] : "1em", ["marginLeft"] : "1.5rem", ["direction"] : "column" })},children,))), ["ol"] : (({node, children, ...props}) => (jsx("ol",{css:({ ["listStyleType"] : "decimal", ["marginTop"] : "1em", ["marginBottom"] : "1em", ["marginLeft"] : "1.5rem", ["direction"] : "column" })},children,))), ["li"] : (({node, children, ...props}) => (jsx("li",{css:({ ["marginTop"] : "0.5em", ["marginBottom"] : "0.5em" })},children,))), ["a"] : (({node, children, ...props}) => (jsx(RadixThemesLink,{css:({ ["&:hover"] : ({ ["color"] : "var(--accent-8)" }) }),href:"#",...props},children,))), ["code"] : (({node, inline, className, children, ...props}) => { const match = (className || '').match(/language-(?<lang>.*)/); let _language = match ? match[1] : '';  ;             return inline ? (                 jsx(RadixThemesCode,{...props},children,)             ) : (                 jsx(SyntaxHighlighter,{children:((Array.isArray(children)) ? children.join("\n") : children),css:({ ["marginTop"] : "1em", ["marginBottom"] : "1em" }),language:_language,style:((resolvedColorMode === "light") ? oneLight : oneDark),wrapLongLines:true,...props},)             );         }) })
+            )
+        }
+        
 
 function Root_67307579233438140451645407764231573661 () {
   
@@ -123,45 +162,6 @@ RadixThemesDropdownMenu.Item,
 {onClick:on_click_65dc12a5fb3b1a2fddc7ded837f9fe42},
 "Home"
 ,)
-  )
-}
-
-        function ComponentMap_a5553a20fba0d7498da9ba7265557b15 () {
-            
-  const { resolvedColorMode } = useContext(ColorModeContext)
-
-
-
-            return (
-                ({ ["h1"] : (({node, children, ...props}) => (jsx(RadixThemesHeading,{as:"h1",css:({ ["marginTop"] : "0.5em", ["marginBottom"] : "0.5em" }),size:"6",...props},children,))), ["h2"] : (({node, children, ...props}) => (jsx(RadixThemesHeading,{as:"h2",css:({ ["marginTop"] : "0.5em", ["marginBottom"] : "0.5em" }),size:"5",...props},children,))), ["h3"] : (({node, children, ...props}) => (jsx(RadixThemesHeading,{as:"h3",css:({ ["marginTop"] : "0.5em", ["marginBottom"] : "0.5em" }),size:"4",...props},children,))), ["h4"] : (({node, children, ...props}) => (jsx(RadixThemesHeading,{as:"h4",css:({ ["marginTop"] : "0.5em", ["marginBottom"] : "0.5em" }),size:"3",...props},children,))), ["h5"] : (({node, children, ...props}) => (jsx(RadixThemesHeading,{as:"h5",css:({ ["marginTop"] : "0.5em", ["marginBottom"] : "0.5em" }),size:"2",...props},children,))), ["h6"] : (({node, children, ...props}) => (jsx(RadixThemesHeading,{as:"h6",css:({ ["marginTop"] : "0.5em", ["marginBottom"] : "0.5em" }),size:"1",...props},children,))), ["p"] : (({node, children, ...props}) => (jsx(RadixThemesText,{as:"p",css:({ ["marginTop"] : "1em", ["marginBottom"] : "1em" }),...props},children,))), ["ul"] : (({node, children, ...props}) => (jsx("ul",{css:({ ["listStyleType"] : "disc", ["marginTop"] : "1em", ["marginBottom"] : "1em", ["marginLeft"] : "1.5rem", ["direction"] : "column" })},children,))), ["ol"] : (({node, children, ...props}) => (jsx("ol",{css:({ ["listStyleType"] : "decimal", ["marginTop"] : "1em", ["marginBottom"] : "1em", ["marginLeft"] : "1.5rem", ["direction"] : "column" })},children,))), ["li"] : (({node, children, ...props}) => (jsx("li",{css:({ ["marginTop"] : "0.5em", ["marginBottom"] : "0.5em" })},children,))), ["a"] : (({node, children, ...props}) => (jsx(RadixThemesLink,{css:({ ["&:hover"] : ({ ["color"] : "var(--accent-8)" }) }),href:"#",...props},children,))), ["code"] : (({node, inline, className, children, ...props}) => { const match = (className || '').match(/language-(?<lang>.*)/); let _language = match ? match[1] : '';  ;             return inline ? (                 jsx(RadixThemesCode,{...props},children,)             ) : (                 jsx(SyntaxHighlighter,{children:((Array.isArray(children)) ? children.join("\n") : children),css:({ ["marginTop"] : "1em", ["marginBottom"] : "1em" }),language:_language,style:((resolvedColorMode === "light") ? oneLight : oneDark),wrapLongLines:true,...props},)             );         }) })
-            )
-        }
-        
-
-function Box_29153929612996640286051038635217864596 () {
-  
-  const reflex___state____state__reflex_gpt___chat___state____chat_state = useContext(StateContexts.reflex___state____state__reflex_gpt___chat___state____chat_state)
-
-
-
-
-
-  
-  return (
-    jsx(
-RadixThemesBox,
-{css:({ ["width"] : "100%" })},
-reflex___state____state__reflex_gpt___chat___state____chat_state.messages_rx_state_.map((chat_message_rx_state_,index_545dd83c60f1e386)=>(jsx(
-RadixThemesBox,
-{css:({ ["width"] : "100%" }),key:index_545dd83c60f1e386},
-jsx(
-RadixThemesBox,
-{css:({ ["textAlign"] : (chat_message_rx_state_["is_bot"] ? "left" : "right"), ["marginTop"] : "1em" })},
-jsx(
-ReactMarkdown,
-{components:ComponentMap_a5553a20fba0d7498da9ba7265557b15(),css:({ ["backgroundColor"] : (chat_message_rx_state_["is_bot"] ? "var(--mauve-4)" : "var(--blue-4)"), ["color"] : (chat_message_rx_state_["is_bot"] ? "var(--mauve-12)" : "var(--blue-12)"), ["display"] : "inline-block", ["padding"] : "1em", ["borderRadius"] : "8px", ["@media screen and (min-width: 0)"] : ({ ["maxWidth"] : "30em" }), ["@media screen and (min-width: 30em)"] : ({ ["maxWidth"] : "30em" }), ["@media screen and (min-width: 48em)"] : ({ ["maxWidth"] : "50em" }), ["@media screen and (min-width: 62em)"] : ({ ["maxWidth"] : "50em" }), ["@media screen and (min-width: 80em)"] : ({ ["maxWidth"] : "50em" }), ["@media screen and (min-width: 96em)"] : ({ ["maxWidth"] : "50em" }) }),rehypePlugins:[rehypeKatex, rehypeRaw],remarkPlugins:[remarkMath, remarkGfm, remarkUnwrapImages]},
-chat_message_rx_state_["message"]
-,),),))),)
   )
 }
 
@@ -284,7 +284,7 @@ jsx(
 RadixThemesHeading,
 {size:"9"},
 "Chat here!"
-,),jsx(Box_29153929612996640286051038635217864596,{},)
+,),jsx(Box_234368619528846631270840088488457238567,{},)
 ,jsx(Root_67307579233438140451645407764231573661,{},)
 ,),),jsx(
 "footer",
