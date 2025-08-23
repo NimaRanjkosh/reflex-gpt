@@ -1,7 +1,7 @@
 from typing import List
 import reflex as rx
 from . import ai
-from reflex_gpt.models import Chat as ChatModel
+from reflex_gpt.models import ChatSession as ChatModel
 
 class ChatMessage(rx.Base):
     message:str
@@ -28,12 +28,12 @@ class ChatState(rx.State):
     
     
     def append_message(self, message, is_bot:bool = False):
-        with rx.session() as session:
-            obj = ChatModel(
-                title = message,
-            )
-            session.add(obj)
-            session.commit()
+        # with rx.session() as session:
+        #     obj = ChatModel(
+        #         title = message,
+        #     )
+        #     session.add(obj)
+        #     session.commit()
         self.messages.append(
                 ChatMessage(
                     message = message,
