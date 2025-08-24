@@ -1,7 +1,7 @@
 from typing import List
 import reflex as rx
 from . import ai
-from reflex_gpt.models import ChatSession
+from reflex_gpt.models import ChatSession, ChatSessionMessageModel
 
 class ChatMessage(rx.Base):
     message:str
@@ -29,18 +29,26 @@ class ChatState(rx.State):
                 db_session.refresh(obj) 
                 print(obj, obj.id)
                 self.chat_session = obj
+                
+    def insert_messages_to_db(self, content, role="unknown"):
+        print("Inserting message to db", content, role)
+        if self.chat_session is None:
+            return
+        if not isinstance(self.chat_session, ChatSession):
+            return
+        with rx.session() as db_session:
+            data = {
+                "session_id": self.chat_session.id,
+                "content": content,
+                "role": role,
+            }
+            obj = ChatSessionMessageModel(**data)
+            db_session.add(obj) # prepare to save
+            db_session.commit() # actually save 
     
     
-    def append_message(self, message, is_bot:bool = False):
-        # with rx.session() as session:
-        #     obj = ChatModel(
-        #         title = message,
-        #     )
-        #     session.add(obj)
-        #     session.commit()
-        print(self.chat_session)
-        if self.chat_session is not None:
-            print(self.chat_session.id)
+    def append_message_to_ui(self, message, is_bot:bool = False):
+
         self.messages.append(
                 ChatMessage(
                     message = message,
@@ -71,11 +79,13 @@ class ChatState(rx.State):
         user_message = form_data.get("message")
         if user_message:
             self.did_submit = True
-            self.append_message(message = user_message, is_bot = False)
+            self.append_message_to_ui(message = user_message, is_bot = False)
+            self.insert_messages_to_db(content=user_message, role="user")
             yield
             gpt_messages = self.get_gpt_messages()
             bot_response = ai.get_llm_response(gpt_messages)
             # await asyncio.sleep(2)
             self.did_submit = False
-            self.append_message(message = bot_response, is_bot = True)
+            self.append_message_to_ui(message = bot_response, is_bot = True)
+            self.insert_messages_to_db(content=bot_response, role="system")
             yield
