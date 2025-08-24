@@ -16,6 +16,11 @@ type Pages = {
   "/": {
     params: {};
   };
+  "/chat/:session_id": {
+    params: {
+      "session_id": string;
+    };
+  };
   "/about": {
     params: {};
   };
@@ -39,7 +44,11 @@ type RouteFiles = {
   };
   "root.jsx": {
     id: "root";
-    page: "/404" | "/" | "/about" | "/chat" | "/*";
+    page: "/404" | "/" | "/chat/:session_id" | "/about" | "/chat" | "/*";
+  };
+  "routes/[chat].$[session_id]._index.jsx": {
+    id: "routes/[chat].$[session_id]._index";
+    page: "/chat/:session_id";
   };
   "routes/[about]._index.jsx": {
     id: "routes/[about]._index";

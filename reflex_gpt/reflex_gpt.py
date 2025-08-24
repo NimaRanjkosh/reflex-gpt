@@ -13,6 +13,13 @@ app.add_page(pages.home_page, route=routes.HOME_ROUTE)
 app.add_page(pages.about_us_page, route=routes.ABOUT_US)
 app.add_page(
     chat.chat_page,
+    route=f"{routes.CHAT_ROUTE}/[session_id]",
+    on_load=chat.state.ChatState.on_detail_load,
+)
+
+
+app.add_page(
+    chat.chat_page,
     route=routes.CHAT_ROUTE,
     on_load=chat.state.ChatState.on_load,
 )
