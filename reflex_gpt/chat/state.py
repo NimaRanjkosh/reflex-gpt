@@ -20,15 +20,25 @@ class ChatState(rx.State):
     def user_did_submit(self) -> bool:
         return self.did_submit
     
-    def on_load(self):
-        if self.chat_session is None:
-            with rx.session() as db_session:
+    def create_new_chat_session(self):
+        with rx.session() as db_session:
                 obj = ChatSession()
                 db_session.add(obj) # prepare to save
                 db_session.commit() # actually save
                 db_session.refresh(obj) 
                 print(obj, obj.id)
                 self.chat_session = obj
+    
+    def clear_chat_and_start_new(self):
+        self.chat_session = None
+        self.create_new_chat_session()
+        self.messages = []
+        yield
+    
+    
+    def on_load(self):
+        if self.chat_session is None:
+            self.create_new_chat_session()
                 
     def insert_messages_to_db(self, content, role="unknown"):
         print("Inserting message to db", content, role)
