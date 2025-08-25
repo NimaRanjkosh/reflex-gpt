@@ -1,5 +1,7 @@
-from typing import List
 import reflex as rx
+import sqlmodel
+
+from typing import List, Optional
 from . import ai
 from reflex_gpt.models import ChatSession, ChatSessionMessageModel
 
@@ -13,6 +15,7 @@ class ChatState(rx.State):
     All functionallities for Chat with AI
     """
     chat_session: ChatSession = None
+    not_found: Optional[bool] = None
     did_submit:bool = False
     messages: List[ChatMessage] = []
     
@@ -42,12 +45,28 @@ class ChatState(rx.State):
         self.messages = []
         yield
     
+    def get_chat_session_from_db(self, session_id:int = None):
+        if session_id is None:
+            session_id = self.get_session_id()
+        # ChatSession.id == session_id
+        with rx.session() as db_session:
+            sql_statement = sqlmodel.select(
+                ChatSession
+            ).where(
+                ChatSession.id == session_id
+            )
+            result = db_session.exec(sql_statement).one_or_none()
+            if result is None:
+                self.not_found = True
+            else:
+                self.not_found = False
+            self.chat_session = result
+        
     def on_detail_load(self):
-        print(self.get_session_id(), type(self.get_session_id()))
-        # session_id = self.get_session_id()
-        # if not isinstance(session_id, int):
-        #     self.invalid_lookup = True
-    
+        session_id = self.get_session_id()
+        if isinstance(session_id, int):
+            self.get_chat_session_from_db(session_id=session_id)
+        
     def on_load(self):
         if self.chat_session is None:
             self.create_new_chat_session()

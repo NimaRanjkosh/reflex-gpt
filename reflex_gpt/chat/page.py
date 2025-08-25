@@ -49,6 +49,11 @@ def chat_page():
         rx.vstack(
             rx.hstack(
                 rx.heading("Chat here!", size="5"),
+                rx.cond(
+                  ChatState.not_found,
+                  "Not Found",
+                  "Found"  
+                ),
                 rx.button("+ New Chat", on_click=ChatState.clear_chat_and_start_new
                   
               )  
