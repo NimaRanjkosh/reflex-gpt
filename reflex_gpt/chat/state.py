@@ -61,6 +61,11 @@ class ChatState(rx.State):
             else:
                 self.not_found = False
             self.chat_session = result
+            messages = result.messages
+            for msg_obj in messages:
+                msg_txt = msg_obj.content
+                is_bot = False if msg_obj.role == "user" else True
+                self.append_message_to_ui(message=msg_txt, is_bot=is_bot)
         
     def on_detail_load(self):
         session_id = self.get_session_id()

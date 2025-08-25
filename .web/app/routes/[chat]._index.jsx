@@ -21,12 +21,12 @@ import { jsx } from "@emotion/react"
 
 
 
-function Dropdownmenu__item_78259143428191714580501905205005467293 () {
+function Dropdownmenu__item_160771094599294285760928589324466380096 () {
   
   const [addEvents, connectErrors] = useContext(EventLoopContext);
 
 
-  const on_click_2c894a0ac7061de32d1bc4170d98a2b5 = useCallback(((_e) => (addEvents([(Event("reflex___state____state.reflex_gpt___navigation___state____nav_state.to_chat", ({  }), ({  })))], [_e], ({  })))), [addEvents, Event])
+  const on_click_59474374dc8dcb82b24118c65f912003 = useCallback(((_e) => (addEvents([(Event("reflex___state____state.reflex_gpt___navigation___state____nav_state.to_about_us", ({  }), ({  })))], [_e], ({  })))), [addEvents, Event])
 
 
 
@@ -34,79 +34,8 @@ function Dropdownmenu__item_78259143428191714580501905205005467293 () {
   return (
     jsx(
 RadixThemesDropdownMenu.Item,
-{onClick:on_click_2c894a0ac7061de32d1bc4170d98a2b5},
-"Chat"
-,)
-  )
-}
-
-function Box_167132008475368693765178692882732489628 () {
-  
-  const reflex___state____state__reflex_gpt___chat___state____chat_state = useContext(StateContexts.reflex___state____state__reflex_gpt___chat___state____chat_state)
-
-
-
-
-
-  
-  return (
-    jsx(
-RadixThemesBox,
-{css:({ ["width"] : "100%" })},
-reflex___state____state__reflex_gpt___chat___state____chat_state.messages_rx_state_.map((chat_message_rx_state_,index_16a7b5e2e06caf2c)=>(jsx(
-RadixThemesBox,
-{css:({ ["width"] : "100%" }),key:index_16a7b5e2e06caf2c},
-jsx(
-RadixThemesBox,
-{css:({ ["textAlign"] : (chat_message_rx_state_["is_bot"] ? "left" : "right"), ["marginTop"] : "1em" })},
-jsx(
-ReactMarkdown,
-{components:ComponentMap_a5553a20fba0d7498da9ba7265557b15(),css:({ ["backgroundColor"] : (chat_message_rx_state_["is_bot"] ? "var(--mauve-4)" : "var(--blue-4)"), ["color"] : (chat_message_rx_state_["is_bot"] ? "var(--mauve-12)" : "var(--blue-12)"), ["display"] : "inline-block", ["padding"] : "1em", ["borderRadius"] : "8px", ["@media screen and (min-width: 0)"] : ({ ["maxWidth"] : "30em" }), ["@media screen and (min-width: 30em)"] : ({ ["maxWidth"] : "30em" }), ["@media screen and (min-width: 48em)"] : ({ ["maxWidth"] : "50em" }), ["@media screen and (min-width: 62em)"] : ({ ["maxWidth"] : "50em" }), ["@media screen and (min-width: 80em)"] : ({ ["maxWidth"] : "50em" }), ["@media screen and (min-width: 96em)"] : ({ ["maxWidth"] : "50em" }) }),rehypePlugins:[rehypeKatex, rehypeRaw],remarkPlugins:[remarkMath, remarkGfm, remarkUnwrapImages]},
-chat_message_rx_state_["message"]
-,),),))),)
-  )
-}
-
-function Fragment_114065205177711263837194906430059584370 () {
-  
-  const reflex___state____state__reflex_gpt___chat___state____chat_state = useContext(StateContexts.reflex___state____state__reflex_gpt___chat___state____chat_state)
-
-
-
-
-
-  
-  return (
-    jsx(
-Fragment,
-{},
-(reflex___state____state__reflex_gpt___chat___state____chat_state.user_did_submit_rx_state_ ? (jsx(
-Fragment,
-{},
-jsx(
-RadixThemesText,
-{as:"p"},
-"Submitted"
-,),)) : (jsx(Fragment,{},)
-)),)
-  )
-}
-
-function Dropdownmenu__item_24723954489570581789777515458957729503 () {
-  
-  const [addEvents, connectErrors] = useContext(EventLoopContext);
-
-
-  const on_click_65dc12a5fb3b1a2fddc7ded837f9fe42 = useCallback(((_e) => (addEvents([(Event("reflex___state____state.reflex_gpt___navigation___state____nav_state.to_home", ({  }), ({  })))], [_e], ({  })))), [addEvents, Event])
-
-
-
-  
-  return (
-    jsx(
-RadixThemesDropdownMenu.Item,
-{onClick:on_click_65dc12a5fb3b1a2fddc7ded837f9fe42},
-"Home"
+{onClick:on_click_59474374dc8dcb82b24118c65f912003},
+"About"
 ,)
   )
 }
@@ -153,6 +82,25 @@ RadixThemesButton,
   )
 }
 
+function Dropdownmenu__item_78259143428191714580501905205005467293 () {
+  
+  const [addEvents, connectErrors] = useContext(EventLoopContext);
+
+
+  const on_click_2c894a0ac7061de32d1bc4170d98a2b5 = useCallback(((_e) => (addEvents([(Event("reflex___state____state.reflex_gpt___navigation___state____nav_state.to_chat", ({  }), ({  })))], [_e], ({  })))), [addEvents, Event])
+
+
+
+  
+  return (
+    jsx(
+RadixThemesDropdownMenu.Item,
+{onClick:on_click_2c894a0ac7061de32d1bc4170d98a2b5},
+"Chat"
+,)
+  )
+}
+
 function Flex_329276041114583325619445428654361896925 () {
   
   const reflex___state____state__reflex_gpt___chat___state____chat_state = useContext(StateContexts.reflex___state____state__reflex_gpt___chat___state____chat_state)
@@ -176,37 +124,6 @@ RadixThemesHeading,
   )
 }
 
-function Dropdownmenu__item_160771094599294285760928589324466380096 () {
-  
-  const [addEvents, connectErrors] = useContext(EventLoopContext);
-
-
-  const on_click_59474374dc8dcb82b24118c65f912003 = useCallback(((_e) => (addEvents([(Event("reflex___state____state.reflex_gpt___navigation___state____nav_state.to_about_us", ({  }), ({  })))], [_e], ({  })))), [addEvents, Event])
-
-
-
-  
-  return (
-    jsx(
-RadixThemesDropdownMenu.Item,
-{onClick:on_click_59474374dc8dcb82b24118c65f912003},
-"About"
-,)
-  )
-}
-
-        function ComponentMap_a5553a20fba0d7498da9ba7265557b15 () {
-            
-  const { resolvedColorMode } = useContext(ColorModeContext)
-
-
-
-            return (
-                ({ ["h1"] : (({node, children, ...props}) => (jsx(RadixThemesHeading,{as:"h1",css:({ ["marginTop"] : "0.5em", ["marginBottom"] : "0.5em" }),size:"6",...props},children,))), ["h2"] : (({node, children, ...props}) => (jsx(RadixThemesHeading,{as:"h2",css:({ ["marginTop"] : "0.5em", ["marginBottom"] : "0.5em" }),size:"5",...props},children,))), ["h3"] : (({node, children, ...props}) => (jsx(RadixThemesHeading,{as:"h3",css:({ ["marginTop"] : "0.5em", ["marginBottom"] : "0.5em" }),size:"4",...props},children,))), ["h4"] : (({node, children, ...props}) => (jsx(RadixThemesHeading,{as:"h4",css:({ ["marginTop"] : "0.5em", ["marginBottom"] : "0.5em" }),size:"3",...props},children,))), ["h5"] : (({node, children, ...props}) => (jsx(RadixThemesHeading,{as:"h5",css:({ ["marginTop"] : "0.5em", ["marginBottom"] : "0.5em" }),size:"2",...props},children,))), ["h6"] : (({node, children, ...props}) => (jsx(RadixThemesHeading,{as:"h6",css:({ ["marginTop"] : "0.5em", ["marginBottom"] : "0.5em" }),size:"1",...props},children,))), ["p"] : (({node, children, ...props}) => (jsx(RadixThemesText,{as:"p",css:({ ["marginTop"] : "1em", ["marginBottom"] : "1em" }),...props},children,))), ["ul"] : (({node, children, ...props}) => (jsx("ul",{css:({ ["listStyleType"] : "disc", ["marginTop"] : "1em", ["marginBottom"] : "1em", ["marginLeft"] : "1.5rem", ["direction"] : "column" })},children,))), ["ol"] : (({node, children, ...props}) => (jsx("ol",{css:({ ["listStyleType"] : "decimal", ["marginTop"] : "1em", ["marginBottom"] : "1em", ["marginLeft"] : "1.5rem", ["direction"] : "column" })},children,))), ["li"] : (({node, children, ...props}) => (jsx("li",{css:({ ["marginTop"] : "0.5em", ["marginBottom"] : "0.5em" })},children,))), ["a"] : (({node, children, ...props}) => (jsx(RadixThemesLink,{css:({ ["&:hover"] : ({ ["color"] : "var(--accent-8)" }) }),href:"#",...props},children,))), ["code"] : (({node, inline, className, children, ...props}) => { const match = (className || '').match(/language-(?<lang>.*)/); let _language = match ? match[1] : '';  ;             return inline ? (                 jsx(RadixThemesCode,{...props},children,)             ) : (                 jsx(SyntaxHighlighter,{children:((Array.isArray(children)) ? children.join("\n") : children),css:({ ["marginTop"] : "1em", ["marginBottom"] : "1em" }),language:_language,style:((resolvedColorMode === "light") ? oneLight : oneDark),wrapLongLines:true,...props},)             );         }) })
-            )
-        }
-        
-
 function Button_69463893624606557544454598042599441306 () {
   
   const [addEvents, connectErrors] = useContext(EventLoopContext);
@@ -223,6 +140,89 @@ RadixThemesButton,
 {onClick:on_click_ccb953c29cc7103407f2e0b7496ba526},
 "+ New Chat"
 ,)
+  )
+}
+
+function Fragment_114065205177711263837194906430059584370 () {
+  
+  const reflex___state____state__reflex_gpt___chat___state____chat_state = useContext(StateContexts.reflex___state____state__reflex_gpt___chat___state____chat_state)
+
+
+
+
+
+  
+  return (
+    jsx(
+Fragment,
+{},
+(reflex___state____state__reflex_gpt___chat___state____chat_state.user_did_submit_rx_state_ ? (jsx(
+Fragment,
+{},
+jsx(
+RadixThemesText,
+{as:"p"},
+"Submitted"
+,),)) : (jsx(Fragment,{},)
+)),)
+  )
+}
+
+        function ComponentMap_a5553a20fba0d7498da9ba7265557b15 () {
+            
+  const { resolvedColorMode } = useContext(ColorModeContext)
+
+
+
+            return (
+                ({ ["h1"] : (({node, children, ...props}) => (jsx(RadixThemesHeading,{as:"h1",css:({ ["marginTop"] : "0.5em", ["marginBottom"] : "0.5em" }),size:"6",...props},children,))), ["h2"] : (({node, children, ...props}) => (jsx(RadixThemesHeading,{as:"h2",css:({ ["marginTop"] : "0.5em", ["marginBottom"] : "0.5em" }),size:"5",...props},children,))), ["h3"] : (({node, children, ...props}) => (jsx(RadixThemesHeading,{as:"h3",css:({ ["marginTop"] : "0.5em", ["marginBottom"] : "0.5em" }),size:"4",...props},children,))), ["h4"] : (({node, children, ...props}) => (jsx(RadixThemesHeading,{as:"h4",css:({ ["marginTop"] : "0.5em", ["marginBottom"] : "0.5em" }),size:"3",...props},children,))), ["h5"] : (({node, children, ...props}) => (jsx(RadixThemesHeading,{as:"h5",css:({ ["marginTop"] : "0.5em", ["marginBottom"] : "0.5em" }),size:"2",...props},children,))), ["h6"] : (({node, children, ...props}) => (jsx(RadixThemesHeading,{as:"h6",css:({ ["marginTop"] : "0.5em", ["marginBottom"] : "0.5em" }),size:"1",...props},children,))), ["p"] : (({node, children, ...props}) => (jsx(RadixThemesText,{as:"p",css:({ ["marginTop"] : "1em", ["marginBottom"] : "1em" }),...props},children,))), ["ul"] : (({node, children, ...props}) => (jsx("ul",{css:({ ["listStyleType"] : "disc", ["marginTop"] : "1em", ["marginBottom"] : "1em", ["marginLeft"] : "1.5rem", ["direction"] : "column" })},children,))), ["ol"] : (({node, children, ...props}) => (jsx("ol",{css:({ ["listStyleType"] : "decimal", ["marginTop"] : "1em", ["marginBottom"] : "1em", ["marginLeft"] : "1.5rem", ["direction"] : "column" })},children,))), ["li"] : (({node, children, ...props}) => (jsx("li",{css:({ ["marginTop"] : "0.5em", ["marginBottom"] : "0.5em" })},children,))), ["a"] : (({node, children, ...props}) => (jsx(RadixThemesLink,{css:({ ["&:hover"] : ({ ["color"] : "var(--accent-8)" }) }),href:"#",...props},children,))), ["code"] : (({node, inline, className, children, ...props}) => { const match = (className || '').match(/language-(?<lang>.*)/); let _language = match ? match[1] : '';  ;             return inline ? (                 jsx(RadixThemesCode,{...props},children,)             ) : (                 jsx(SyntaxHighlighter,{children:((Array.isArray(children)) ? children.join("\n") : children),css:({ ["marginTop"] : "1em", ["marginBottom"] : "1em" }),language:_language,style:((resolvedColorMode === "light") ? oneLight : oneDark),wrapLongLines:true,...props},)             );         }) })
+            )
+        }
+        
+
+function Dropdownmenu__item_24723954489570581789777515458957729503 () {
+  
+  const [addEvents, connectErrors] = useContext(EventLoopContext);
+
+
+  const on_click_65dc12a5fb3b1a2fddc7ded837f9fe42 = useCallback(((_e) => (addEvents([(Event("reflex___state____state.reflex_gpt___navigation___state____nav_state.to_home", ({  }), ({  })))], [_e], ({  })))), [addEvents, Event])
+
+
+
+  
+  return (
+    jsx(
+RadixThemesDropdownMenu.Item,
+{onClick:on_click_65dc12a5fb3b1a2fddc7ded837f9fe42},
+"Home"
+,)
+  )
+}
+
+function Box_132416337952706815141409294811105048817 () {
+  
+  const reflex___state____state__reflex_gpt___chat___state____chat_state = useContext(StateContexts.reflex___state____state__reflex_gpt___chat___state____chat_state)
+
+
+
+
+
+  
+  return (
+    jsx(
+RadixThemesBox,
+{css:({ ["width"] : "100%" })},
+reflex___state____state__reflex_gpt___chat___state____chat_state.messages_rx_state_.map((chat_message_rx_state_,index_1bef73131c7f92f0)=>(jsx(
+RadixThemesBox,
+{css:({ ["width"] : "100%" }),key:index_1bef73131c7f92f0},
+jsx(
+RadixThemesBox,
+{css:({ ["textAlign"] : (chat_message_rx_state_["is_bot"] ? "left" : "right"), ["marginTop"] : "1em" })},
+jsx(
+ReactMarkdown,
+{components:ComponentMap_a5553a20fba0d7498da9ba7265557b15(),css:({ ["backgroundColor"] : (chat_message_rx_state_["is_bot"] ? "var(--mauve-4)" : "var(--blue-4)"), ["color"] : (chat_message_rx_state_["is_bot"] ? "var(--mauve-12)" : "var(--blue-12)"), ["display"] : "inline-block", ["padding"] : "1em", ["borderRadius"] : "8px", ["@media screen and (min-width: 0)"] : ({ ["maxWidth"] : "30em" }), ["@media screen and (min-width: 30em)"] : ({ ["maxWidth"] : "30em" }), ["@media screen and (min-width: 48em)"] : ({ ["maxWidth"] : "50em" }), ["@media screen and (min-width: 62em)"] : ({ ["maxWidth"] : "50em" }), ["@media screen and (min-width: 80em)"] : ({ ["maxWidth"] : "50em" }), ["@media screen and (min-width: 96em)"] : ({ ["maxWidth"] : "50em" }) }),rehypePlugins:[rehypeKatex, rehypeRaw],remarkPlugins:[remarkMath, remarkGfm, remarkUnwrapImages]},
+chat_message_rx_state_["message"]
+,),),))),)
   )
 }
 
@@ -323,7 +323,7 @@ jsx(
 RadixThemesFlex,
 {align:"start",className:"rx-Stack",css:({ ["margin"] : "3rem auto", ["minHeight"] : "85vh" }),direction:"column",justify:"center",gap:"5"},
 jsx(Flex_329276041114583325619445428654361896925,{},)
-,jsx(Box_167132008475368693765178692882732489628,{},)
+,jsx(Box_132416337952706815141409294811105048817,{},)
 ,jsx(Root_67307579233438140451645407764231573661,{},)
 ,),),jsx(
 "footer",
