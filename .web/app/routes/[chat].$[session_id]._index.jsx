@@ -101,48 +101,6 @@ RadixThemesDropdownMenu.Item,
   )
 }
 
-function Flex_329276041114583325619445428654361896925 () {
-  
-  const reflex___state____state__reflex_gpt___chat___state____chat_state = useContext(StateContexts.reflex___state____state__reflex_gpt___chat___state____chat_state)
-
-
-
-
-
-  
-  return (
-    jsx(
-RadixThemesFlex,
-{align:"start",className:"rx-Stack",direction:"row",gap:"3"},
-jsx(
-RadixThemesHeading,
-{size:"5"},
-"Chat here!"
-,),(reflex___state____state__reflex_gpt___chat___state____chat_state.not_found_rx_state_ ? "Not Found" : "Found")
-,jsx(Button_69463893624606557544454598042599441306,{},)
-,)
-  )
-}
-
-function Button_69463893624606557544454598042599441306 () {
-  
-  const [addEvents, connectErrors] = useContext(EventLoopContext);
-
-
-  const on_click_ccb953c29cc7103407f2e0b7496ba526 = useCallback(((_e) => (addEvents([(Event("reflex___state____state.reflex_gpt___chat___state____chat_state.clear_chat_and_start_new", ({  }), ({  })))], [_e], ({  })))), [addEvents, Event])
-
-
-
-  
-  return (
-    jsx(
-RadixThemesButton,
-{onClick:on_click_ccb953c29cc7103407f2e0b7496ba526},
-"+ New Chat"
-,)
-  )
-}
-
 function Fragment_114065205177711263837194906430059584370 () {
   
   const reflex___state____state__reflex_gpt___chat___state____chat_state = useContext(StateContexts.reflex___state____state__reflex_gpt___chat___state____chat_state)
@@ -179,6 +137,48 @@ RadixThemesText,
             )
         }
         
+
+function Flex_324072385117203347833904237304217124913 () {
+  
+  const reflex___state____state__reflex_gpt___chat___state____chat_state = useContext(StateContexts.reflex___state____state__reflex_gpt___chat___state____chat_state)
+
+
+
+
+
+  
+  return (
+    jsx(
+RadixThemesFlex,
+{align:"start",className:"rx-Stack",direction:"row",gap:"3"},
+jsx(
+RadixThemesHeading,
+{size:"5"},
+"Chat here!"
+,),(reflex___state____state__reflex_gpt___chat___state____chat_state.not_found_rx_state_ ? "Not Found" : "Found")
+,jsx(Button_118698611908699771263946945485653943831,{},)
+,)
+  )
+}
+
+function Button_118698611908699771263946945485653943831 () {
+  
+  const [addEvents, connectErrors] = useContext(EventLoopContext);
+
+
+  const on_click_0012293e8bbae41d2f4f260445e07bb6 = useCallback(((_e) => (addEvents([(Event("reflex___state____state.reflex_gpt___chat___state____chat_state.create_new_chat_and_redirect", ({  }), ({  })))], [_e], ({  })))), [addEvents, Event])
+
+
+
+  
+  return (
+    jsx(
+RadixThemesButton,
+{onClick:on_click_0012293e8bbae41d2f4f260445e07bb6},
+"+ New Chat"
+,)
+  )
+}
 
 function Dropdownmenu__item_24723954489570581789777515458957729503 () {
   
@@ -322,7 +322,7 @@ Fragment,
 jsx(
 RadixThemesFlex,
 {align:"start",className:"rx-Stack",css:({ ["margin"] : "3rem auto", ["minHeight"] : "85vh" }),direction:"column",justify:"center",gap:"5"},
-jsx(Flex_329276041114583325619445428654361896925,{},)
+jsx(Flex_324072385117203347833904237304217124913,{},)
 ,jsx(Box_132416337952706815141409294811105048817,{},)
 ,jsx(Root_67307579233438140451645407764231573661,{},)
 ,),),jsx(

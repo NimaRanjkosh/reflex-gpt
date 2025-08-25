@@ -38,14 +38,30 @@ class ChatState(rx.State):
                 db_session.refresh(obj) 
                 print(obj, obj.id)
                 self.chat_session = obj
+                return obj
     
-    def clear_chat_and_start_new(self):
+    def clear_ui(self):
+        """Clear the UI messages and reset state"""
         self.chat_session = None
+        self.not_found = None
+        self.did_submit = False
+        self.messages = []
+    
+    def create_new_chat_and_redirect(self):
+        """Create a new chat session and redirect to its page"""
+        self.clear_ui()
+        new_chat_session = self.create_new_chat_session()
+        return rx.redirect(f"/chat/{new_chat_session.id}")
+        
+    def clear_chat_and_start_new(self):
+        """Clear current chat and start a new one"""
+        self.clear_ui()
         self.create_new_chat_session()
         self.messages = []
         yield
     
     def get_chat_session_from_db(self, session_id:int = None):
+        """Get Chat Session from DB and populate messages"""
         if session_id is None:
             session_id = self.get_session_id()
         # ChatSession.id == session_id
@@ -68,13 +84,23 @@ class ChatState(rx.State):
                 self.append_message_to_ui(message=msg_txt, is_bot=is_bot)
         
     def on_detail_load(self):
+        """Load the chat session details based on the session_id in the URL"""
         session_id = self.get_session_id()
-        if isinstance(session_id, int):
-            self.get_chat_session_from_db(session_id=session_id)
+        reload_detail = False
+        if not self.chat_session:
+            reload_detail = True
+        else:
+            "Has a chat session"
+            if self.chat_session.id != session_id:
+                reload_detail = True
+        if reload_detail:
+            self.clear_ui()
+            if isinstance(session_id, int):
+                self.get_chat_session_from_db(session_id=session_id)
         
     def on_load(self):
-        if self.chat_session is None:
-            self.create_new_chat_session()
+        self.clear_ui()
+        self.create_new_chat_session()
                 
     def insert_messages_to_db(self, content, role="unknown"):
         print("Inserting message to db", content, role)

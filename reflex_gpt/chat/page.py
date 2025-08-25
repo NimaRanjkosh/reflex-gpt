@@ -54,7 +54,7 @@ def chat_page():
                   "Not Found",
                   "Found"  
                 ),
-                rx.button("+ New Chat", on_click=ChatState.clear_chat_and_start_new
+                rx.button("+ New Chat", on_click=ChatState.create_new_chat_and_redirect
                   
               )  
             ),
